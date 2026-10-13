@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#100e27">
+  <meta name="description" content="A small, quiet place made with care for Aashi, from Vikram.">
+  <title>A little place among the stars — for Aashi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#journey">Skip to the experience</a>
+  <div class="scene-shell" aria-hidden="true">
+    <canvas id="world" aria-label="A softly moving three-dimensional dream world"></canvas>
+    <div class="cloud-cloud cloud-one"></div>
+    <div class="cloud-cloud cloud-two"></div>
+    <div class="cloud-cloud cloud-three"></div>
+    <div class="scene-wash"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader-mark"><span></span><span></span><span></span></div>
+    <p>making a little room among the stars</p>
+    <button class="loader-skip" type="button">Skip the wait</button>
+  </div>
+
+  <header class="topbar">
+    <a class="wordmark" href="#welcome" aria-label="Return to the beginning"><span class="wordmark-star">✳</span><span>a little place</span></a>
+    <div class="topbar-right">
+      <button class="utility" id="sound-toggle" type="button" aria-label="Ambient sound is off" aria-pressed="false" title="Ambient sound is off"><span class="utility-icon" aria-hidden="true">♪</span><span class="utility-label">Sound off</span></button>
+      <button class="utility" id="motion-toggle" type="button" aria-label="Toggle quiet mode and skip animations" aria-pressed="false" title="Pause animations"><span class="utility-icon" aria-hidden="true">◌</span><span class="utility-label">Quiet mode</span></button>
+      <button class="utility restart" id="restart-top" type="button" title="Start again"><span class="utility-icon" aria-hidden="true">↺</span><span class="utility-label">Start again</span></button>
+    </div>
+  </header>
+
+  <nav class="chapter-nav" aria-label="Journey chapters">
+    <div class="nav-heading"><span>YOUR LITTLE JOURNEY</span><span class="nav-count" id="nav-count">01 <i>/</i> 10</span></div>
+    <div class="nav-rail" role="list">
+      <a role="listitem" href="#welcome" aria-label="Chapter 1: The threshold" aria-current="step"><span class="nav-dot"></span><span class="nav-tip">The threshold</span></a>
+      <a role="listitem" href="#stars" aria-label="Chapter 2: A sky full of notes"><span class="nav-dot"></span><span class="nav-tip">A sky full of notes</span></a>
+      <a role="listitem" href="#garden" aria-label="Chapter 3: A garden that listens"><span class="nav-dot"></span><span class="nav-tip">A garden that listens</span></a>
+      <a role="listitem" href="#sanctuary" aria-label="Chapter 4: A softer place"><span class="nav-dot"></span><span class="nav-tip">A softer place</span></a>
+      <a role="listitem" href="#breathing" aria-label="Chapter 5: The breathing garden"><span class="nav-dot"></span><span class="nav-tip">The breathing garden</span></a>
+      <a role="listitem" href="#constellation" aria-label="Chapter 6: Constellation of little things"><span class="nav-dot"></span><span class="nav-tip">Little things</span></a>
+      <a role="listitem" href="#needs" aria-label="Chapter 7: What would feel kind"><span class="nav-dot"></span><span class="nav-tip">What would feel kind</span></a>
+      <a role="listitem" href="#play" aria-label="Chapter 8: A little lightness"><span class="nav-dot"></span><span class="nav-tip">A little lightness</span></a>
+      <a role="listitem" href="#letter" aria-label="Chapter 9: A note from Vikram"><span class="nav-dot"></span><span class="nav-tip">A note from Vikram</span></a>
+      <a role="listitem" href="#goodnight" aria-label="Chapter 10: Keep this light"><span class="nav-dot"></span><span class="nav-tip">Keep this light</span></a>
+    </div>
+    <div class="progress-track"><span id="progress-fill"></span></div>
+  </nav>
+
+  <main id="journey">
+    <section class="chapter hero" id="welcome" data-scene="0" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A SMALL, QUIET PLACE TO LAND</p>
+        <p class="hero-from">for <span>Aashi</span>, from Vikram</p>
+        <h1 id="hero-title">You can just<br><em>be here.</em></h1>
+        <p class="hero-intro">Nothing to fix. Nothing to explain. Just a little corner of the universe made with care, for however today feels.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#stars"><span>Step inside</span><span class="button-arrow" aria-hidden="true">↗</span></a>
+          <button class="text-button" id="skip-to-letter" type="button">Skip to Vikram’s note <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="hero-foot"><span class="tiny-star">✦</span><span>Take your time. You can leave whenever you want.</span></div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="moon-halo"></div><div class="hero-moon"><span></span></div><div class="orbit-speck speck-one"></div><div class="orbit-speck speck-two"></div></div>
+      <button class="scroll-cue" type="button" data-next="stars"><span class="scroll-cue-line"></span><span>WANDER A LITTLE</span></button>
+      <div class="hero-index">01 <span>/</span> 10</div>
+    </section>
+
+    <section class="chapter stars-chapter" id="stars" data-scene="1" aria-labelledby="stars-title">
+      <div class="chapter-inner split-layout">
+        <div class="chapter-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CHAPTER 01 · THE NIGHT SKY</p>
+          <h2 id="stars-title">A sky full<br>of <em>small truths.</em></h2>
+          <p class="lead">Some things are true even on the days you can’t quite feel them.</p>
+          <p>Tap a star and let one kind thing find its way to you. There’s no order to follow. You can open just one, or none at all.</p>
+          <div class="star-note" id="star-note" aria-live="polite"><span class="note-sparkle">✦</span><span class="note-text">Choose a star. It has something gentle to say.</span></div>
+          <div class="chapter-meta"><span>03 STARS · NO WRONG ORDER</span><span class="meta-rule"></span></div>
+        </div>
+        <div class="star-map scene-card reveal" aria-label="Interactive star map">
+          <div class="star-map-label"><span>TONIGHT’S CONSTELLATION</span><span class="map-coord">∞ · 01</span></div>
+          <div class="star-map-lines" aria-hidden="true"><svg viewBox="0 0 500 420"><path d="M73 96 153 157 242 89 332 157 410 92M153 157l19 126 125-48 35-78M172 283l-82 57M297 235l102 87"/></svg></div>
+          <button class="interactive-star star-a" type="button" data-note="You don’t have to make this moment look okay for it to count."><span class="star-core"></span><span class="star-label">A LITTLE PERMISSION</span></button>
+          <button class="interactive-star star-b" type="button" data-note="You deserve gentleness on the days when being gentle with yourself feels hard."><span class="star-core"></span><span class="star-label">A LITTLE KINDNESS</span></button>
+          <button class="interactive-star star-c" type="button" data-note="You are allowed to take this one small moment at a time."><span class="star-core"></span><span class="star-label">A LITTLE SPACE</span></button>
+          <span class="map-star ms-1"></span><span class="map-star ms-2"></span><span class="map-star ms-3"></span><span class="map-star ms-4"></span><span class="map-star ms-5"></span><span class="map-star ms-6"></span>
+          <span class="map-caption">A small light is still a light.</span>
+          <span class="scene-card-corner corner-tl"></span><span class="scene-card-corner corner-br"></span>
+        </div>
+      </div>
+      <span class="chapter-number">01</span>
+    </section>
+
+    <section class="chapter garden-chapter" id="garden" data-scene="2" aria-labelledby="garden-title">
+      <div class="chapter-inner split-layout reverse">
+        <div class="garden-scene scene-card reveal" aria-label="A moonlit garden where you can grow flowers">
+          <div class="garden-topline"><span>THE NIGHT-BLOOM GARDEN</span><span class="garden-count"><b id="flower-count">00</b> / 05 BLOOMS</span></div>
+          <div class="garden-moon" aria-hidden="true"></div>
+          <div class="garden-horizon" aria-hidden="true"></div>
+          <div class="garden-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="flower-bed" id="flower-bed" aria-live="polite">
+            <button class="seed-spot" type="button" aria-label="Grow a flower in the first spot"><span>＋</span></button>
+            <button class="seed-spot" type="button" aria-label="Grow a flower in the second spot"><span>＋</span></button>
+            <button class="seed-spot" type="button" aria-label="Grow a flower in the third spot"><span>＋</span></button>
+            <button class="seed-spot" type="button" aria-label="Grow a flower in the fourth spot"><span>＋</span></button>
+            <button class="seed-spot" type="button" aria-label="Grow a flower in the fifth spot"><span>＋</span></button>
+          </div>
+          <div class="flower-message" id="flower-message" aria-live="polite"><span class="flower-message-mark">✿</span><span>Choose a little patch of earth. See what grows.</span></div>
+          <span class="scene-card-corner corner-tl"></span><span class="scene-card-corner corner-br"></span>
+        </div>
+        <div class="chapter-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CHAPTER 02 · A GARDEN THAT LISTENS</p>
+          <h2>A little care<br>can still <em>grow.</em></h2>
+          <p class="lead">Even when everything feels like too much, tiny things are allowed to be enough.</p>
+          <p>Plant a few lights if you like. Each one holds a small reminder, and none of them need to grow on a schedule.</p>
+          <div class="garden-instruction"><span class="instruction-icon">✿</span><span><b>Tap an empty spot</b><br>Each flower will open with a kind word.</span></div>
+          <div class="chapter-meta"><span>GROW WHAT YOU WANT · STOP WHEN YOU WANT</span><span class="meta-rule"></span></div>
+        </div>
+      </div>
+      <span class="chapter-number">02</span>
+    </section>
+
+    <section class="chapter sanctuary-chapter" id="sanctuary" data-scene="3" aria-labelledby="sanctuary-title">
+      <div class="sanctuary-halo" aria-hidden="true"></div>
+      <div class="sanctuary-content reveal">
+        <p class="eyebrow centered"><span class="eyebrow-line"></span> CHAPTER 03 · A SOFTER PLACE <span class="eyebrow-line"></span></p>
+        <h2 id="sanctuary-title">You don’t have to<br>be <em>okay right now.</em></h2>
+        <p class="sanctuary-lead">You don’t have to turn a hard feeling into a lesson.<br>You can let it be hard, and let yourself be human inside it.</p>
+        <div class="sanctuary-grid">
+          <div class="sanctuary-card"><span class="card-index">01</span><span class="card-glyph">○</span><p>You don’t have to<br>pretend you’re fine.</p></div>
+          <div class="sanctuary-card"><span class="card-index">02</span><span class="card-glyph">⌁</span><p>You don’t have to solve<br>everything tonight.</p></div>
+          <div class="sanctuary-card"><span class="card-index">03</span><span class="card-glyph">✳</span><p>You’re allowed to rest<br>without earning it.</p></div>
+        </div>
+        <div class="optional-grounding"><span class="grounding-mark">A THOUGHT, ONLY IF IT HELPS</span><p>Maybe notice one thing holding you up right now: the chair beneath you, the floor, your pillow, or the ground.</p><span class="grounding-aside">You can skip this. You are already doing enough.</span></div>
+      </div>
+      <span class="chapter-number">03</span>
+    </section>
+
+    <section class="chapter breathing-chapter" id="breathing" data-scene="4" aria-labelledby="breathing-title">
+      <div class="chapter-inner split-layout">
+        <div class="chapter-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CHAPTER 04 · THE BREATHING GARDEN</p>
+          <h2>A small pause,<br>if you’d <em>like one.</em></h2>
+          <p class="lead">A slow light to rest your eyes on. No breath to get right. No pace to keep up with.</p>
+          <p>You can simply watch the garden breathe. If you want to join it, the circle offers a gentle rhythm. Stop whenever you like.</p>
+          <div class="breath-controls"><button class="button button-light" id="breath-toggle" type="button" aria-pressed="false"><span>Begin the gentle rhythm</span><span class="button-arrow" aria-hidden="true">↗</span></button><button class="button button-quiet" id="breath-stop" type="button" disabled>Stop</button></div>
+          <p class="breath-state" id="breath-state" aria-live="polite">The light is resting here with you.</p>
+          <div class="chapter-meta"><span>OPTIONAL · NO PERFECT WAY TO DO THIS</span><span class="meta-rule"></span></div>
+        </div>
+        <div class="breathing-card scene-card reveal">
+          <div class="breathing-orbit orbit-a"></div><div class="breathing-orbit orbit-b"></div>
+          <div class="breath-orb-wrap"><div class="breath-orb" id="breath-orb"><span class="orb-inner"></span><span class="orb-core"></span></div></div>
+          <div class="breath-instruction" id="breath-instruction">A little room to breathe</div>
+          <div class="breath-rings" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <span class="breath-card-label">LET THE LIGHT SET THE PACE</span>
+          <span class="scene-card-corner corner-tl"></span><span class="scene-card-corner corner-br"></span>
+        </div>
+      </div>
+      <span class="chapter-number">04</span>
+    </section>
+
+    <section class="chapter memories-chapter" id="constellation" data-scene="5" aria-labelledby="memories-title">
+      <div class="chapter-inner memories-layout">
+        <div class="chapter-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CHAPTER 05 · A CONSTELLATION OF LITTLE THINGS</p>
+          <h2>Some things are<br>worth <em>keeping close.</em></h2>
+          <p class="lead">A little constellation Vikram can fill with real moments, words, and details only the two of you know.</p>
+          <p>These are placeholders, left blank on purpose. Tap a card to write something true, or let them stay quiet for now.</p>
+          <div class="edit-hint"><span>✎</span> Your edits stay in this browser on this device.</div>
+        </div>
+        <div class="memory-gallery reveal">
+          <div class="observatory-dome" aria-hidden="true"><span></span><i></i></div>
+          <div class="gallery-heading"><span>YOUR CONSTELLATION</span><span class="gallery-edit">TAP ANY CARD TO PERSONALIZE</span></div>
+          <div class="memory-orbit" aria-hidden="true"><span class="memory-star m-star-1"></span><span class="memory-star m-star-2"></span><span class="memory-star m-star-3"></span><span class="memory-star m-star-4"></span><span class="memory-star m-star-5"></span><span class="memory-star m-star-6"></span><svg viewBox="0 0 500 350"><path d="M48 90 142 180 250 67 348 169 440 81M142 180l10 99 112-105 80 100 96-105"/></svg></div>
+          <div class="memory-cards">
+            <article class="memory-card"><span class="memory-card-top"><span>01 · A MOMENT</span><span>↗</span></span><span class="memory-card-copy" data-editable="memory-one" contenteditable="true" spellcheck="false" aria-label="Edit a moment that felt like us">a moment that felt like us</span><span class="memory-card-foot">a little piece of your story</span></article>
+            <article class="memory-card"><span class="memory-card-top"><span>02 · A THING I LOVE</span><span>↗</span></span><span class="memory-card-copy" data-editable="memory-two" contenteditable="true" spellcheck="false" aria-label="Edit something I love about you">something I love about you</span><span class="memory-card-foot">something true, in your own words</span></article>
+            <article class="memory-card"><span class="memory-card-top"><span>03 · A LITTLE DETAIL</span><span>↗</span></span><span class="memory-card-copy" data-editable="memory-three" contenteditable="true" spellcheck="false" aria-label="Edit a tiny detail I never want to forget">a tiny detail I never want to forget</span><span class="memory-card-foot">the small things can shine, too</span></article>
+          </div>
+        </div>
+      </div>
+      <span class="chapter-number">05</span>
+    </section>
+
+    <section class="chapter needs-chapter" id="needs" data-scene="6" aria-labelledby="needs-title">
+      <div class="chapter-inner needs-layout">
+        <div class="chapter-copy centered-copy reveal">
+          <p class="eyebrow centered"><span class="eyebrow-line"></span> CHAPTER 06 · YOUR WAY THROUGH <span class="eyebrow-line"></span></p>
+          <h2 id="needs-title">What would feel<br><em>kind right now?</em></h2>
+          <p class="lead">There isn’t a best answer. Pick the one that sounds softest, or leave them all alone.</p>
+        </div>
+        <div class="need-picker reveal" role="group" aria-label="Choose what might feel kind">
+          <button class="need-option active" type="button" data-need="comfort" aria-pressed="true"><span class="need-symbol">♡</span><span>Comfort</span><span class="need-arrow">↗</span></button>
+          <button class="need-option" type="button" data-need="distraction" aria-pressed="false"><span class="need-symbol">✧</span><span>A distraction</span><span class="need-arrow">↗</span></button>
+          <button class="need-option" type="button" data-need="encouragement" aria-pressed="false"><span class="need-symbol">↑</span><span>Encouragement</span><span class="need-arrow">↗</span></button>
+          <button class="need-option" type="button" data-need="quiet" aria-pressed="false"><span class="need-symbol">☾</span><span>Quiet</span><span class="need-arrow">↗</span></button>
+          <button class="need-option" type="button" data-need="smile" aria-pressed="false"><span class="need-symbol">⌣</span><span>A little smile</span><span class="need-arrow">↗</span></button>
+        </div>
+        <div class="need-response reveal" id="need-response" aria-live="polite"><span class="response-mark">✦</span><p>You are allowed to be exactly where you are. I’m here beside you, with no hurry.</p><span class="response-signature">— a little comfort, from Vikram</span></div>
+      </div>
+      <span class="chapter-number">06</span>
+    </section>
+
+    <section class="chapter play-chapter" id="play" data-scene="7" aria-labelledby="play-title">
+      <div class="chapter-inner split-layout reverse">
+        <div class="play-scene scene-card reveal">
+          <div class="play-topline"><span>THE LITTLE LIGHT FIELD</span><span><b id="firefly-count">00</b> LIGHTS FOUND</span></div>
+          <div class="firefly-field" id="firefly-field" aria-label="Interactive field of floating fireflies">
+            <button class="firefly fly-1" type="button" aria-label="Catch the first firefly"><span></span></button><button class="firefly fly-2" type="button" aria-label="Catch the second firefly"><span></span></button><button class="firefly fly-3" type="button" aria-label="Catch the third firefly"><span></span></button><button class="firefly fly-4" type="button" aria-label="Catch the fourth firefly"><span></span></button><button class="firefly fly-5" type="button" aria-label="Catch the fifth firefly"><span></span></button><button class="firefly fly-6" type="button" aria-label="Catch the sixth firefly"><span></span></button><button class="firefly fly-7" type="button" aria-label="Catch the seventh firefly"><span></span></button><button class="firefly fly-8" type="button" aria-label="Catch the eighth firefly"><span></span></button>
+          </div>
+          <div class="play-message" id="play-message" aria-live="polite">No score. Just a few lights, if you feel like it.</div>
+          <div class="lucky-wrap"><button class="lucky-star" id="lucky-star" type="button" aria-label="Open a lucky star"><span>✦</span><i>OPEN A LUCKY STAR</i></button><span class="lucky-message" id="lucky-message" aria-live="polite"></span></div>
+          <span class="scene-card-corner corner-tl"></span><span class="scene-card-corner corner-br"></span>
+        </div>
+        <div class="chapter-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CHAPTER 07 · A LITTLE LIGHTNESS</p>
+          <h2>Nothing to win.<br>Just <em>things to find.</em></h2>
+          <p class="lead">Tiny lights wandering around with nowhere important to be.</p>
+          <p>Tap a firefly if one catches your eye. Open a lucky star for a small, completely nonbinding prediction. These are only here to be a little silly.</p>
+          <div class="play-how"><span class="play-how-dot"></span> Works with a tap, a click, or the keyboard.</div>
+          <div class="chapter-meta"><span>NO SCORE · NO TIMER · JUST FOR FUN</span><span class="meta-rule"></span></div>
+        </div>
+      </div>
+      <span class="chapter-number">07</span>
+    </section>
+
+    <section class="chapter letter-chapter" id="letter" data-scene="8" aria-labelledby="letter-title">
+      <div class="letter-layout">
+        <div class="letter-heading reveal"><p class="eyebrow centered"><span class="eyebrow-line"></span> CHAPTER 08 · A NOTE FROM VIKRAM <span class="eyebrow-line"></span></p><h2 id="letter-title">A few words,<br><em>from me to you.</em></h2></div>
+        <article class="letter-card scene-card reveal">
+          <div class="letter-topline"><span>FOR AASHI</span><span class="letter-star">✳</span><span>WITH CARE, ALWAYS</span></div>
+          <!-- PERSONALIZE THE LETTER: Edit these paragraphs with words that are true for you and Aashi. -->
+          <div class="letter-body" id="letter-body" aria-label="A note from Vikram to Aashi">
+            <p>My dearest Aashi,</p>
+            <p>You don’t have to know what to say or how to feel. You don’t have to make this easier for anyone by pretending it isn’t heavy. If all you can do right now is get through this moment, that is enough.</p>
+            <p>I care about you, exactly as you are — not only on the bright days, and not because you have something to give me. I’m here if you want company, a distraction, a quiet call, or simply the knowledge that someone is thinking of you. No need to answer this or feel different by the end.</p>
+            <p>For tonight, you can put down whatever you don’t have room to carry. Rest if rest is there. Take your time if it isn’t.</p>
+            <p class="letter-sign">With all my care,<br><span>Vikram</span></p>
+          </div>
+          <button class="edit-letter" id="edit-letter" type="button"><span>✎</span> Personalize this note</button>
+          <p class="letter-edit-hint" id="letter-edit-hint">The note can be edited here. Your changes stay on this device.</p>
+          <div class="letter-bottomline"><span>WRITTEN WITH CARE · 01</span><span>✦</span><span>KEEP AS LONG AS YOU LIKE</span></div>
+        </article>
+        <p class="letter-footer reveal">A page can only hold a little light. I hope this one helps you feel a little less alone, for a moment.</p>
+      </div>
+      <span class="chapter-number">08</span>
+    </section>
+
+    <section class="chapter final-chapter" id="goodnight" data-scene="9" aria-labelledby="final-title">
+      <div class="final-skyline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="final-content reveal">
+        <p class="eyebrow centered"><span class="eyebrow-line"></span> CHAPTER 09 · THE SKY KEEPS A LIGHT FOR YOU <span class="eyebrow-line"></span></p>
+        <div class="name-constellation" aria-label="A constellation spelling Aashi"><span>A</span><span>A</span><span>S</span><span>H</span><span>I</span><div class="name-stars" aria-hidden="true"></div></div>
+        <h2 id="final-title">You are loved,<br><em>as you are.</em></h2>
+        <p class="final-message">You don’t owe anyone a smile, an explanation, or a performance.<br>You get to be a person having a hard day. That is enough.</p>
+        <p class="final-signature">Here with care,<br><span>Vikram</span></p>
+        <div class="final-actions"><button class="button button-light" id="replay" type="button"><span>Wander through again</span><span class="button-arrow" aria-hidden="true">↺</span></button><button class="text-button" id="quiet-finish" type="button">Keep it quiet <span aria-hidden="true">☾</span></button></div>
+        <p class="final-footnote">This is just a small place to pause. You don’t need to do anything with it.</p>
+      </div>
+      <span class="chapter-number">09</span>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>MADE WITH CARE FOR AASHI</span><span>NO RUSH. NO REPLY NEEDED.</span><button type="button" id="footer-restart">START AGAIN ↑</button></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
